@@ -5,6 +5,7 @@
                 :mini-variant="miniVariant"
                 :clipped="clipped"
                 v-model="drawer"
+                width="250"
                 enable-resize-watcher
                 fixed
                 app>
@@ -41,7 +42,7 @@
         <v-content>
             <router-view/>
         </v-content>
-        <v-navigation-drawer temporary :right="right" v-model="rightDrawer" fixed app>
+        <v-navigation-drawer temporary :right="right" v-model="rightDrawer" width="250" fixed app>
             <v-list>
                 <v-list-tile @click="right = !right">
                     <v-list-tile-action>
