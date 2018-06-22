@@ -9,6 +9,24 @@ a
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: relative;
 
+    .logo
+        z-index: 2;
+
+    .list__tile__action
+        z-index: 3;
+
+    &:after
+        background-image: url("../assets/nav-bg.png");
+        background-size: cover;
+        content: "";
+        opacity: 0.75;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+
     .list a
         color: white!important;
 
