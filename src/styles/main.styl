@@ -11,6 +11,7 @@ a
 
     .logo
         z-index: 2;
+        margin-left: 12px;
 
     .list__tile__action
         z-index: 3;
@@ -39,6 +40,13 @@ a
 .navigation-drawer > .list:not(.list--dense) .vb--logo-container .list__tile:hover
     background: none!important;
 
+.list__tile__title
+    text-transform: uppercase!important;
+    font-size: 0.85rem;
+
+.list__tile__action
+    min-width: 40px;
+
 aside.navigation-drawer
     border-left: 4px solid #ED5A73;
     background: #151030!important;
@@ -46,6 +54,8 @@ aside.navigation-drawer
     .list
         background: #151030!important;
 
+        .icon
+            font-size: 1.5rem;
         .icon, a
             color: #4F306C;
 
@@ -69,8 +79,9 @@ aside.navigation-drawer
     color: #BA6DDB!important;
 
 .toolbar
-    border-bottom: 1px solid #d3d3d3;
-    box-shadow: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)!important;
+    //border-bottom: 1px solid #d3d3d3;
+    //box-shadow: none;
 
 .tabs__slider
     height: 4px;
@@ -91,6 +102,15 @@ aside.navigation-drawer
         margin-top: 4px;
         width: 100px;
 
+h1
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+
+.content--wrap
+    background: url('../assets/trianglify.svg');
+    background-size: cover;
 
 .page
     padding: 2rem;
