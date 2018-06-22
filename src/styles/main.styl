@@ -49,8 +49,11 @@ aside.navigation-drawer
         .icon, a
             color: #4F306C;
 
-    .list .list__tile:hover
-        background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(125,52,80,0.65) 100%)!important;
+    .list a.list__tile
+        tranistion: all 0.25s ease;
+        background: #151030;
+        &:hover
+            background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(125,52,80,0.65) 100%)!important;
 
     .list a:hover .icon
         color: #BA6DDB;
@@ -87,3 +90,7 @@ aside.navigation-drawer
     img
         margin-top: 4px;
         width: 100px;
+
+
+.page
+    padding: 2rem;

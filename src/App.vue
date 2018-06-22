@@ -6,7 +6,8 @@
                 :clipped="clipped"
                 v-model="drawer"
                 width="250"
-                enable-resize-watcher
+                mobile-break-point="10"
+                disable-resize-watcher
                 fixed
                 app>
             <v-list>
