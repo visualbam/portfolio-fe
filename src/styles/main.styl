@@ -1,3 +1,7 @@
+$design-color = #ed5a73;
+$development-color = #F9B967;
+$link-color = #BA6DDB;
+
 .navigation-drawer .list
     padding: 0;
 
@@ -114,44 +118,24 @@ h1
 .content--wrap
     background: url('../assets/trianglify.svg');
     background-size: cover;
+    //background: hsla(255, 255, 5, 1);
 
 .page
-    padding: 2rem;
+    padding: 1rem;
 
 // cards
 .btn .btn__content
 .card__actions
     background: hsla(248, 95, 8, 1);
-    padding: 4px 0px;
+    padding: 4px 0;
 
     .btn__content
-        color: #ED5A73!important;
         font-size: 10px;
         font-weight: bold;
 
         .icon
             font-size: 18px;
 
-
-.card:hover
-    //.headline
-    //    color: #BA6DDB;
-
-    //.card__media
-    //    transition: all 0.25s ease;
-    //    background-color: rgba(0, 0, 0, 1);
-    //
-    //    &:before
-    //        content: "";
-    //        transition: all 0.25s ease;
-    //        display: block;
-    //        height: 100%;
-    //        position: absolute;
-    //        z-index: 2;
-    //        top: 0;
-    //        left: 0;
-    //        width: 100%;
-    //        background-color: rgba(0, 0, 0, 0.65);
 
 .grey--text
     font-size: 10px;
@@ -165,8 +149,29 @@ h1
     transition:all 0.25s ease;
     text-transform: capitalize!important;
 
-    &:hover
-        color: #ed5a73;
+.design
+    .btn__content
+        color: $design-color;
+    .headline:hover
+        color: $design-color;
+
+.development
+    .btn__content
+        color: $development-color;
+    .headline:hover
+        color: $development-color;
 
 .card__title
     background: hsla(248, 47, 13, 1);
+
+// pagination
+.pagination__item--active.primary
+    background: $link-color!important;
+
+.resume
+    h2
+        font-size: 28px;
+        line-height: 1;
+    p
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
