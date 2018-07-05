@@ -19,25 +19,62 @@
                 </v-layout>
             </v-container>
         </v-card>
-        <v-card class="ma-5 pa-4">
-            <h3> <v-icon>work</v-icon>  Work Experience</h3>
-            <br>
-            <v-list three-line>
-                <template v-for="company in companies">
-                    <v-subheader>{{company.name}}</v-subheader>
-                    <v-divider></v-divider>
-                    <v-list-tile>
-                        <v-list-tile-avatar>
-                            <img :src="company.icon" alt="">
-                        </v-list-tile-avatar>
-                        <v-list-tile-content>
-                            <v-list-tile-title>{{company.position}}</v-list-tile-title>
-                            <v-list-tile-sub-title>{{company.startDate}} - {{company.endDate}}</v-list-tile-sub-title>
-                        </v-list-tile-content>
-                    </v-list-tile>
-                </template>
-            </v-list>
-        </v-card>
+        <v-container grid-list-lg>
+            <v-layout row wrap pa-5>
+                <v-flex md-6>
+                    <v-card class="pa-4">
+                        <h3> <v-icon>work</v-icon>  Work Experience</h3>
+                        <br>
+                        <v-list three-line>
+                            <template v-for="company in companies">
+                                <v-subheader>{{company.name}}</v-subheader>
+                                <v-divider></v-divider>
+                                <v-list-tile>
+                                    <v-list-tile-avatar>
+                                        <img :src="company.icon" alt="">
+                                    </v-list-tile-avatar>
+                                    <v-list-tile-content>
+                                        <v-list-tile-title>{{company.position}}</v-list-tile-title>
+                                        <v-list-tile-sub-title>{{company.startDate}} - {{company.endDate}}</v-list-tile-sub-title>
+                                    </v-list-tile-content>
+                                    <v-list-tile-action>
+                                        <v-icon>link</v-icon>
+                                    </v-list-tile-action>
+                                </v-list-tile>
+                            </template>
+                        </v-list>
+                    </v-card>
+                </v-flex>
+                <v-flex md-6>
+                    <v-card class="pa-4">
+                        <h3> <v-icon>class</v-icon>  Education</h3>
+                        <br>
+                        <v-list three-line>
+                            <template>
+                                <v-subheader>Pittsburgh Technical College</v-subheader>
+                                <v-divider></v-divider>
+                                <v-list-tile>
+                                    <v-list-tile-content>
+                                        <v-list-tile-title>Graphic Design</v-list-tile-title>
+                                        <v-list-tile-sub-title>2009 - 2011</v-list-tile-sub-title>
+                                    </v-list-tile-content>
+                                </v-list-tile>
+                            </template>
+                            <template>
+                                <v-subheader>Mon Valley Career and Technology Center</v-subheader>
+                                <v-divider></v-divider>
+                                <v-list-tile>
+                                    <v-list-tile-content>
+                                        <v-list-tile-title>Multimedia Design</v-list-tile-title>
+                                        <v-list-tile-sub-title>2006 - 2008</v-list-tile-sub-title>
+                                    </v-list-tile-content>
+                                </v-list-tile>
+                            </template>
+                        </v-list>
+                    </v-card>
+                </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 
