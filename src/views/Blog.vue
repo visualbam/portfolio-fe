@@ -1,10 +1,10 @@
 <template>
     <div class="blog page">
-        <v-container grid-list-md>
+        <v-container grid-list-lg>
             <v-layout row wrap>
-                <v-flex xs12 sm4 v-for="post in posts">
+                <v-flex xs12 sm6 md4 lg3 d-flex v-for="post in posts">
                     <v-card dark v-bind:class="post.category">
-                        <v-card-media height="100px" :src="post.image"> </v-card-media>
+                        <v-card-media height="150px" :src="post.image"> </v-card-media>
                         <v-card-title>
                             <span class="grey--text">{{post.date}}</span><br>
                             <a class="headline">{{post.title}}</a>
@@ -21,14 +21,14 @@
                 </v-flex>
             </v-layout>
         </v-container>
-        <v-container>
-            <div class="text-xs-center">
-                <v-pagination
-                        v-model="page"
-                        :length="4"
-                ></v-pagination>
-            </div>
-        </v-container>
+        <!--<v-container>-->
+            <!--<div class="text-xs-center">-->
+                <!--<v-pagination-->
+                        <!--v-model="page"-->
+                        <!--:length="4"-->
+                <!--&gt;</v-pagination>-->
+            <!--</div>-->
+        <!--</v-container>-->
     </div>
 </template>
 
@@ -66,6 +66,20 @@
                         date: 'February 22, 2018',
                         category: 'development',
                         bookmark: true
+                    },
+                    {
+                        image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured-3.jpg',
+                        title: '6 Joomla extensions you cannot live without this in your pocket',
+                        date: 'February 28, 2018',
+                        category: 'design',
+                        bookmark: true
+                    },
+                    {
+                        image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured_adobe.jpg',
+                        title: 'Download 10 free images from shutterstock',
+                        date: 'January 8, 2018',
+                        category: 'design',
+                        bookmark: false
                     },
                     {
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured-3.jpg',

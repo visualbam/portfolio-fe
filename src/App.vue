@@ -33,13 +33,13 @@
                 </router-link>
             </v-list>
         </v-navigation-drawer>
-        <v-toolbar app tabs :clipped-left="clipped">
-            <v-tabs height="64" grow>
-                <v-tab v-for="category in categories" :key="category.title">
-                    {{ category.title }}
-                </v-tab>
-            </v-tabs>
-        </v-toolbar>
+        <!--<v-toolbar app tabs :clipped-left="clipped">-->
+            <!--<v-tabs height="64" grow>-->
+                <!--<v-tab v-for="category in categories" :key="category.title">-->
+                    <!--{{ category.title }}-->
+                <!--</v-tab>-->
+            <!--</v-tabs>-->
+        <!--</v-toolbar>-->
         <v-content>
             <router-view/>
         </v-content>

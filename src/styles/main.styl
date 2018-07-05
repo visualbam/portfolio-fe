@@ -121,18 +121,14 @@ h1
     padding: 1rem;
 
 // cards
-.btn .btn__content
 .card__actions
     background: hsla(248, 95, 8, 1);
     padding: 4px 0;
-
     .btn__content
-        font-size: 10px;
+        font-size: 12px;
         font-weight: bold;
-
         .icon
             font-size: 18px;
-
 
 .grey--text
     font-size: 12px;
@@ -140,7 +136,7 @@ h1
 
 .headline
     color: white;
-    font-size: 15px!important;
+    font-size: 18px!important;
     line-height: 1.5!important;
     font-weight: bold;
     transition:all 0.25s ease;
@@ -165,6 +161,18 @@ h1
 .pagination__item--active.primary
     background: $link-color!important;
 
+.blog
+    .card
+        position: relative;
+
+    .card__title
+        padding-bottom: 60px;
+
+    .card__actions
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
 .resume
     h2
         font-size: 28px;
@@ -175,3 +183,8 @@ h1
 
     img
         max-width: 175px;
+        margin: 0 auto;
+        display: block;
+    .flex:first-child
+        img
+            max-width: 75px;
