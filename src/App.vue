@@ -23,7 +23,7 @@
                 </v-list-tile>
             </v-list>
             <v-list two-line>
-                <router-link v-for="route in routes" :to="route.route" :key="route.route" >
+                <router-link v-for="route in routes" :to="'/'+ route.route" :key="route.route" >
                     <v-list-tile ripple @click="">
                         <v-list-tile-action>
                             <v-icon v-html="route.icon"></v-icon>

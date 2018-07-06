@@ -26,7 +26,7 @@
             <v-layout row wrap pa-5>
                 <v-flex md-6>
                     <v-card class="pa-4">
-                        <h3> <v-icon>work</v-icon>  Work Experience</h3>
+                        <h3>Work Experience</h3>
                         <br>
                         <v-list three-line>
                             <template v-for="company in companies">
@@ -54,7 +54,7 @@
                 </v-flex>
                 <v-flex md-6>
                     <v-card class="pa-4">
-                        <h3> <v-icon>class</v-icon>  Education</h3>
+                        <h3>Education</h3>
                         <br>
                         <v-list three-line>
                             <template v-for="school in schools">

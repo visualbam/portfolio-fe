@@ -4,6 +4,8 @@ import Blog from './views/Blog.vue';
 import Portfolio from './views/Portfolio.vue';
 import Resume from './views/Resume.vue';
 
+import Post from './views/Post.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -15,6 +17,11 @@ export default new Router({
             path: '/blog',
             name: 'blog',
             component: Blog
+        },
+        {
+            path: '/blog/:post',
+            name: 'post',
+            component: Post
         },
         {
             path: '/portfolio',

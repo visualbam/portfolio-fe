@@ -1,6 +1,6 @@
 <template>
     <div class="blog page">
-        <v-toolbar app tabs :clipped-left="clipped">
+        <v-toolbar app tabs>
             <v-tabs height="64" grow>
                 <v-tab v-for="category in categories" :key="category.title">
                     {{ category.title }}
@@ -14,7 +14,9 @@
                         <v-card-media height="125px" :src="post.image"> </v-card-media>
                         <v-card-title>
                             <span class="grey--text">{{post.date}}</span><br>
-                            <a class="headline">{{post.title}}</a>
+                            <router-link :to="'/blog/' + post.postId">
+                                <a class="headline">{{post.title}}</a>
+                            </router-link>
                         </v-card-title>
                         <v-card-actions>
                             <v-btn flat>{{post.category}}</v-btn>
@@ -42,6 +44,11 @@
 <script>
     export default {
         name: 'Blog',
+        methods: {
+            // navigateToPost: function(id) {
+            //     this.$router.push({ name: 'post', params: { postId: id }})
+            // }
+        },
         data() {
             return {
                 categories: [
@@ -58,6 +65,7 @@
                 page: 1,
                 posts: [
                     {
+                        postId: 0,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured_vacation.jpg',
                         title: 'Linkedin Changes Face After 70 Years With New Look',
                         date: 'July 3, 2018',
@@ -65,6 +73,7 @@
                         bookmark: true
                     },
                     {
+                        postId: 1,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured_popups.jpg',
                         title: 'Microsoft to buy github; controversy this week',
                         date: 'March 14, 2018',
@@ -72,6 +81,7 @@
                         bookmark: false
                     },
                     {
+                        postId: 2,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/05/featured_writing-1.jpg',
                         title: '5 ways to improve your sites content without being cheesy',
                         date: 'June 16, 2018',
@@ -79,6 +89,7 @@
                         bookmark: false
                     },
                     {
+                        postId: 3,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured_comparemymove.jpg',
                         title: '6 layouts inspired by tech giants today with no bullshit',
                         date: 'February 22, 2018',
@@ -86,6 +97,7 @@
                         bookmark: true
                     },
                     {
+                        postId: 4,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured-3.jpg',
                         title: '6 Joomla extensions you cannot live without this in your pocket',
                         date: 'February 28, 2018',
@@ -93,6 +105,7 @@
                         bookmark: true
                     },
                     {
+                        postId: 5,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured_adobe.jpg',
                         title: 'Download 10 free images from shutterstock',
                         date: 'January 8, 2018',
@@ -100,6 +113,7 @@
                         bookmark: false
                     },
                     {
+                        postId: 6,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured-3.jpg',
                         title: '6 Joomla extensions you cannot live without this in your pocket',
                         date: 'February 28, 2018',
@@ -107,6 +121,7 @@
                         bookmark: true
                     },
                     {
+                        postId: 7,
                         image: 'https://www.webdesignerdepot.com/cdn-origin/uploads/2018/06/featured_adobe.jpg',
                         title: 'Download 10 free images from shutterstock',
                         date: 'January 8, 2018',
