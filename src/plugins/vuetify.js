@@ -12,6 +12,7 @@ import {
     VGrid,
     VPagination,
     VToolbar,
+    VTooltip,
     VTabs,
     transitions
 } from 'vuetify'
@@ -30,6 +31,7 @@ Vue.use(Vuetify, {
         VGrid,
         VPagination,
         VToolbar,
+        VTooltip,
         VTabs,
         transitions
     },

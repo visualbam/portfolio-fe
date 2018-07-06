@@ -1,10 +1,17 @@
 <template>
     <div class="blog page">
+        <v-toolbar app tabs :clipped-left="clipped">
+            <v-tabs height="64" grow>
+                <v-tab v-for="category in categories" :key="category.title">
+                    {{ category.title }}
+                </v-tab>
+            </v-tabs>
+        </v-toolbar>
         <v-container grid-list-lg>
             <v-layout row wrap>
-                <v-flex xs12 sm6 md4 lg3 d-flex v-for="post in posts">
+                <v-flex xs12 sm6 md4 xl3 d-flex v-for="post in posts">
                     <v-card dark v-bind:class="post.category">
-                        <v-card-media height="150px" :src="post.image"> </v-card-media>
+                        <v-card-media height="125px" :src="post.image"> </v-card-media>
                         <v-card-title>
                             <span class="grey--text">{{post.date}}</span><br>
                             <a class="headline">{{post.title}}</a>
@@ -37,6 +44,17 @@
         name: 'Blog',
         data() {
             return {
+                categories: [
+                    {
+                        title: 'UI/UX'
+                    },
+                    {
+                        title: 'Design'
+                    },
+                    {
+                        title: 'Development'
+                    }
+                ],
                 page: 1,
                 posts: [
                     {

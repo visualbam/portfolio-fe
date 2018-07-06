@@ -185,6 +185,14 @@ h1
         max-width: 175px;
         margin: 0 auto;
         display: block;
+    .grey--text
+        color: $link-color!important;
     .flex:first-child
         img
             max-width: 75px;
+    .list__tile:hover
+        .avatar
+            background-color: lighten(red, 20%);
+        .list__tile__title, v-subheader
+            transition: all 0.25s ease;
+            color: $link-color;
