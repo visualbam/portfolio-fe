@@ -11,6 +11,7 @@ import {
     VIcon,
     VGrid,
     VPagination,
+    VSubheader,
     VToolbar,
     VTooltip,
     VTabs,
@@ -33,6 +34,7 @@ Vue.use(Vuetify, {
         VToolbar,
         VTooltip,
         VTabs,
+        VSubheader,
         transitions
     },
     theme: {

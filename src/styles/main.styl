@@ -115,7 +115,6 @@ h1
 .content--wrap
     background: url('../assets/trianglify.svg');
     background-size: cover;
-    //background: hsla(255, 255, 5, 1);
 
 .page
     padding: 1rem;
@@ -173,6 +172,18 @@ h1
         bottom: 0;
         width: 100%;
 
+.tabs__container
+    height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    .tabs__div
+        flex: 1 0 auto;
+
+
 .resume
     h2
         font-size: 28px;
@@ -187,10 +198,39 @@ h1
         display: block;
     .grey--text
         color: $link-color!important;
+    .company-logo
+        opacity: 0.65;
+        transition: opacity 0.25s ease;
+        &:hover
+            opacity: 1;
     .flex:first-child
         img
             max-width: 75px;
     .list__tile:hover
-        .list__tile__title, v-subheader
+        .list__tile__title, .list__tile__sub-title
             transition: all 0.25s ease;
             color: $link-color;
+
+.v {
+    &--fade {
+        &-enter-active,
+        &-leave-active { transition: all 275ms cb() }
+
+        &-enter,
+        &-leave-to { opacity: 0 }
+
+        &-leave,
+        &-enter-to { opacity: 1 }
+    }
+
+    &--mask {
+        &-enter-active,
+        &-leave-active { transition: all 150ms cb() 500ms }
+
+        &-enter,
+        &-leave-to { opacity: 0 }
+
+        &-leave,
+        &-enter-to { opacity: 1 }
+    }
+            }

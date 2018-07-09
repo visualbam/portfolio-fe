@@ -19,9 +19,16 @@ export default new Router({
             component: Blog
         },
         {
+            path: '/blog/:category',
+            name: 'category',
+            props: true,
+            component: Blog
+        },
+        {
             path: '/blog/:post',
             name: 'post',
-            component: Post
+            props: true,
+            component: Blog
         },
         {
             path: '/portfolio',
