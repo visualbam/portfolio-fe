@@ -1,7 +1,7 @@
 <template>
     <main class="blog page">
         <blog-nav :content="content" :filters="filters" :navs="navs"/>
-        <blog-feed :filters="filters" @setPost="setPost"/>
+        <blog-feed :filters="filters"/>
         <blog-post :post="post"/>
     </main>
 </template>
@@ -35,7 +35,6 @@
             },
             filters() {
                 let filters = {};
-                console.log('poop', this.post);
                 if (this.post) filters.post = this.post;
                 if (this.category) filters.category = this.category;
                 return filters
@@ -44,12 +43,6 @@
         watch: {
             '$route.name' (to, from) {
                 if (to !== from) this.navs++;
-            }
-        },
-        methods: {
-            setPost: (post) => {
-                console.log(post);
-                this.post = post;
             }
         }
     }

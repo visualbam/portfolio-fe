@@ -9,6 +9,7 @@ import Post from './views/Post.vue';
 Vue.use(Router);
 
 export default new Router({
+    mode: 'history',
     routes: [
         {
             path: '/', redirect: '/blog'
@@ -19,13 +20,13 @@ export default new Router({
             component: Blog
         },
         {
-            path: '/blog/:category',
+            path: '/blog/view/:category',
             name: 'category',
             props: true,
             component: Blog
         },
         {
-            path: '/blog/:post',
+            path: '/blog/read/:post',
             name: 'post',
             props: true,
             component: Blog

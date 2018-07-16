@@ -2,12 +2,8 @@
     <transition name="post">
         <article v-if="post" class="post">
             <header class="post__header">
+                <h2>Hello</h2>
                 <h2 class="post__title">{{ title }}</h2>
-                <h3 class="post__meta">by <router-link class="post__author"
-                                                       :to="`/by/${kebabify(author)}`">{{ author }}</router-link>
-                    <span class="post__sep"></span>
-                    <time>{{ prettyDate(published) }}</time>
-                </h3>
                 <blockquote class="post__subtitle">{{ description }}</blockquote>
             </header>
             <section class="post__body rte" v-html="content"></section>
@@ -26,7 +22,6 @@
         data() {
             return {
                 title: '',
-                author: '',
                 content: '',
                 published: '',
                 description: '',
@@ -40,7 +35,6 @@
             }
         },
         methods: {
-            kebabify,
             prettyDate,
             showComments() {
                 setTimeout(() => {
